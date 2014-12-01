@@ -5,8 +5,8 @@
 nnoremap <Leader>vg :VsGetFile<CR>
 nnoremap <Leader>vp :VsPutFile<CR>
 
-
-let s:vs_con_dir = 'C:\vim\plugins\vs_con\plugin'
+" http://stackoverflow.com/questions/4976776/how-to-get-path-to-the-current-vimscript-being-executed
+let s:vs_con_dir = expand('<sfile>:p:h')
 let s:vs_con_rb = s:vs_con_dir . '\vs_con.rb'
 
 function! VsGetFile()
