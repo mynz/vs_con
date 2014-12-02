@@ -25,6 +25,6 @@ function! VsPutFile()
 	let path = expand("%")
 	let line = getpos(".")[1]
 	let cmd = 'ruby ' . s:vs_con_rb . ' --putfile ' . path . " " . line
-	" echo cmd
+	" echom cmd
 	:call system(cmd)
 endfunction

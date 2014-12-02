@@ -18,12 +18,14 @@ end
 def put_file(path, row=1, col=1)
 	return unless File.file? path
 
-	pp path
 	path = File.absolute_path(path)
 
 	dte = get_dte
-	dte.Documents.Open(path)
+
+	io = dte.ItemOperations
+	io.OpenFile path
 	dte.ActiveDocument.Selection.MoveToLineAndOffset(row, col)
+	dte.MainWindow.Activate()
 end
 
 opt = OptionParser.new
