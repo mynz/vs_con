@@ -3,9 +3,10 @@ require 'win32ole'
 require 'optparse'
 
 def get_dte()
-	# return WIN32OLE.connect("VisualStudio.DTE.14.0") # for VS2015
-	# return WIN32OLE.connect("VisualStudio.DTE.15.6") # for VS2017
-	return WIN32OLE.connect("VisualStudio.DTE") # for VS2017
+    # return WIN32OLE.connect("VisualStudio.DTE.14.0") # for VS2015
+    # return WIN32OLE.connect("VisualStudio.DTE.15.6") # for VS2017
+    return WIN32OLE.connect("VisualStudio.DTE.15.0") # for VS2017
+    # return WIN32OLE.connect("VisualStudio.DTE")
 end
 
 def get_file
