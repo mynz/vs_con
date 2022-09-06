@@ -6,6 +6,7 @@ def get_dte()
     # return WIN32OLE.connect("VisualStudio.DTE.14.0") # for VS2015
     # return WIN32OLE.connect("VisualStudio.DTE.15.6") # for VS2017
     # return WIN32OLE.connect("VisualStudio.DTE.15.0") # for VS2017
+    # return WIN32OLE.connect("VisualStudio.DTE.16.0") # for VS2019
     return WIN32OLE.connect("VisualStudio.DTE")
 end
 
